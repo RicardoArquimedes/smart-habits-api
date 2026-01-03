@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1693.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "zip": "npm run build && cd dist && zip -r ../lambda.zip .",
+    "deploy": "npm run zip"
+  }
+
+}
