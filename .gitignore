@@ -2,3 +2,4 @@ node_modules
 dist
 .env
 lambda.zip
+smart-habits-api.zip

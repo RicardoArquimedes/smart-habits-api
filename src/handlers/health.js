@@ -1,4 +1,4 @@
-export const handler = async () => {
+export async function health() {
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -6,4 +6,4 @@ export const handler = async () => {
       service: 'smart-habits-api',
     }),
   };
-};
+}

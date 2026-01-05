@@ -1,16 +1,19 @@
 {
+  "name": "smart-habits-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "prebuild": "rm -rf dist; cp package.json src/",
+     "build": "repack-zip",
+    "postbuild": "mkdir dist; mv smart-habits-api.zip dist/ && rm src/package.json"
+  },
   "dependencies": {
-    "aws-sdk": "^2.1693.0"
+    "@aws-sdk/client-dynamodb": "^3.500.0",
+    "@aws-sdk/lib-dynamodb": "^3.500.0",
+    "google-auth-library": "^10.5.0"
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  },
-  "scripts": {
-    "build": "tsc",
-    "zip": "npm run build && cd dist && zip -r ../lambda.zip .",
-    "deploy": "npm run zip"
+    "repack-zip": "^0.2.8",
+    "typescript": "^5.3.3"
   }
-
 }
